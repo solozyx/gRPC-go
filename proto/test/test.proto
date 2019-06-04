@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+// 必须以 ; 结束
+package myproto;
+
+/**
+ Test 注释演示
+*/
+message Test{
+    // 以分号结束1行 不能省略
+    string name = 1; // 1 表示第1个字段
+    repeated int32 tizhong = 2; // repeated 对应Go的slice
+    int32 shengao = 3;
+    // 格言
+    string motto = 4;
+}
