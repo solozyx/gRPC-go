@@ -1,0 +1,29 @@
+syntax = "proto3" ;
+
+package myproto ;
+
+// 定义服务
+service HelloServer{
+    // 一个打招呼的服务
+    rpc SayHello(HelloReq)returns(HelloRsp){}
+    // 一个说名字的服务
+    rpc SayName(NameReq)returns(NameRsp){}
+}
+
+// 客户端发送给服务端
+message HelloReq{
+    string name = 1 ;
+}
+
+// 服务端返回给客户端
+message HelloRsp{
+    string msg =1 ;
+}
+
+message NameReq{
+    string name = 1 ;
+}
+
+message NameRsp{
+    string msg =1 ;
+}
